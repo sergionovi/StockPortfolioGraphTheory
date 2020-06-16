@@ -15,7 +15,7 @@ Objectives:
             Pandas
             yfinance 
             yahoofinancials
-        
+            import matplotlib.pyplot as plt
 @author: Sergio Novi, sergiolnovi@gmail.com
 """
 import requests
@@ -23,6 +23,7 @@ from lxml import html
 import yfinance as yf 
 import pandas as pd
 import os
+import matplotlib.pyplot as plt
 
 # Step 1: Web-Scrap the list of all Bovespa components.
 # We will need this list to download the data with yfinance
@@ -56,10 +57,35 @@ for i in range(len(table[0])):
     
 frames=[];
 for item in bovespaComponents:   
-    frames.append(yf.download(item+'.SA',period='max')['Open']);
+    frames.append(pd.DataFrame({item: 
+        pd.Series(yf.download(item+'.SA',period='max')['Open'])}));
 
-data = pd.DataFrame(pd.concat(frames, keys=bovespaComponents));
+
+    
+    
+# Checking the number of time points per stock    
+NtimePoints=[]
+NtimePoints = [(i,len(frames[i])) for i in range(len(frames))]
+plt.plot(NtimePoints)
+  
+# I will remove one of the stocks because it has a too short period of time
+frames = frames[0:50]+frames[51:]
+    
+
+# As I will perform Correlation analysis, I will concatenate the data 
+# only for the period that is common for all stoks
+
+data = pd.concat(frames, axis=1, join='inner');
+
+
 
 # Save the data in the current folder
 path = os.getcwd()
-data.to_csv (rpath, index = False, header=True)
+name = path+'\\HistoricalData.csv';
+
+data.to_csv(name) 
+
+
+
+
+
