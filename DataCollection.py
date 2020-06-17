@@ -59,9 +59,6 @@ frames=[];
 for item in bovespaComponents:   
     frames.append(pd.DataFrame({item: 
         pd.Series(yf.download(item+'.SA',period='max')['Open'])}));
-
-
-    
     
 # Checking the number of time points per stock    
 NtimePoints=[]
@@ -76,8 +73,6 @@ frames = frames[0:50]+frames[51:]
 # only for the period that is common for all stoks
 
 data = pd.concat(frames, axis=1, join='inner');
-
-
 
 # Save the data in the current folder
 path = os.getcwd()
