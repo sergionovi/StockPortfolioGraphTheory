@@ -17,6 +17,6 @@ Data collection is Done! :)
 
 # Organization:
 
-* DataCollection: Python codes for downloading historical data. 
+* DataCollection.py: Python code for downloading historical data. It does web Scrapping and saves a csv file with stock data for further analysis.  
 
 
