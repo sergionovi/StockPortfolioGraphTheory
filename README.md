@@ -15,7 +15,7 @@ The project is unfinished, but it is progressing well! Stay tuned!
 
 Data collection is Done! :) 
 
-Data Cleaning just started! I will use a deep neural network for the removal of outliers... I am excited with this project!
+Data Cleaning just started! I will use a deep neural network for the removal of outliers... This is likely not the best option, but the main idea is to get in touch with LSTM models through Keras and Tensor flow. 
 
 # Organization:
 
