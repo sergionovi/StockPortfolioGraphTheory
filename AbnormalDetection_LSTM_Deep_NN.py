@@ -47,8 +47,8 @@ def create_dataset(dataset, look_back):
 
 def OutlierDetection(TimeSeries,look_back=7):
     # INPUT: 
-    #TimeSeries: Origial time series        
-    #look_back: Number of past time points to make predictions
+        #TimeSeries: Origial time series        
+        #look_back: Number of past time points to make predictions
     
     
     # Step 1 - Normalize Time Series 
