@@ -33,8 +33,17 @@ import scipy.io
 
 
 # Load the previous downloaded data 
-
 data = pd.read_csv('HistoricalData.csv');
+
+# I will first normalize the data. 
+# As I am going to use the data for connectivity analysis, 
+# this is a good practice.
+
+dataNormalized = data.copy()
+for item in data:
+    if not item=='Date':
+        dataNormalized[item] = data[item]/data[item].max();
+
 
 
 
