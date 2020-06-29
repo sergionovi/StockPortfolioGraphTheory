@@ -35,7 +35,7 @@ import scipy.io
 
 
 # Tranform time series into Data set
-def create_dataset(dataset, look_back):
+def create_dataset(dataset, look_back=7):
 	dataX, dataY = [], []
 	for i in range(len(dataset)-look_back-1):
 		a = dataset[i:(i+look_back)]
@@ -120,8 +120,8 @@ for item in data:
         dataNormalized[item] = data[item]/data[item].max();
 
 
+TimeSeries = np.asarray(dataNormalized['ABEV3'].to_numpy())
 
 
-
-
-
+plot(error)
+plot(12*lst)
