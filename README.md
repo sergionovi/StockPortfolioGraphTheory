@@ -21,5 +21,5 @@ Data Cleaning just started! I will use a deep neural network for the removal of 
 # Organization:
 
 * DataCollection.py: Python code for downloading historical data. It does web Scrapping and saves a csv file with stock data for further analysis.  
-
+* Abnormal Detection: LSTM implemented in Python with TensorFlow to remove outliers from stock time series.
 
