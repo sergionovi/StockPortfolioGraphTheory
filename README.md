@@ -4,6 +4,7 @@ Stock Portfolio Graph Theory is a personal project that aims to apply graph-theo
 
 Initial plan: 
 * Data collection;
+* Data Cleanning
 * Graph/network construction;   
 * Community detection;
 * Within Community Analysis. 
