@@ -4,6 +4,7 @@ Stock Portfolio Graph Theory is a personal project that aims to apply graph-theo
 
 Initial plan: 
 * Data collection;
+* Data Cleanning
 * Graph/network construction;   
 * Community detection;
 * Within Community Analysis. 
@@ -20,5 +21,5 @@ Data Cleaning just started! I will use a deep neural network for the removal of 
 # Organization:
 
 * DataCollection.py: Python code for downloading historical data. It does web Scrapping and saves a csv file with stock data for further analysis.  
-
+* Abnormal Detection: LSTM (deep neural network | deep learning) implemented in Python with TensorFlow to remove outliers from stock time series.
 
